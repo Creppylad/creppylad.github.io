@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+    <style>
+      body{
+        margin: 0px;
+        font-family: 'Poppins', sans-serif;
+      }
+      .owl-talks {
+        display: none;
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        z-index: 1; 
+      }
+
+      .owl-talks .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+        touch-action: manipulation;
+        -moz-backface-visibility: hidden;
+      }
+
+      .owl-talks .owl-stage:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0; 
+      }
+
+      .owl-talks .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        -webkit-transform: translate3d(0px, 0px, 0px); 
+      }
+
+      .owl-talks .owl-wrapper,
+      .owl-talks .owl-item {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0); 
+      }
+
+      .owl-talks .owl-item {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none; 
+      }
+
+      .owl-talks .owl-item img {
+        display: block;
+        width: 100%; 
+      }
+      
+      .owl-talks .owl-item p {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-align: center;
+      }
+
+      .owl-talks .owl-nav.disabled,
+      .owl-talks .owl-dots.disabled {
+        display: none; 
+      }
+
+      .owl-talks .owl-nav .owl-prev,
+      .owl-talks .owl-nav .owl-next,
+      .owl-talks .owl-dot {
+        cursor: pointer;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+      }
+
+      .owl-talks .owl-nav button.owl-prev,
+      .owl-talks .owl-nav button.owl-next,
+      .owl-talks button.owl-dot {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0 !important;
+        font: inherit; 
+      }
+
+      .owl-talks.owl-loaded {
+        display: block; 
+      }
+
+      .owl-talks.owl-loading {
+        opacity: 0;
+        display: block; 
+      }
+
+      .owl-talks.owl-hidden {
+        opacity: 0; 
+      }
+
+      .owl-talks.owl-refresh .owl-item {
+        visibility: hidden; 
+      }
+
+      .owl-talks.owl-drag .owl-item {
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+      }
+
+      .owl-talks.owl-grab {
+        cursor: move;
+        cursor: grab; 
+      }
+
+      .owl-talks.owl-rtl {
+        direction: rtl; 
+      }
+
+      .owl-talks.owl-rtl .owl-item {
+        float: right; 
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="owl-talks">
+      <div class="item">
+        <img src="../images/eton.png">
+        <p>ETON COLLEGE</p>
+      </div>
+      <div class="item">
+        <img src="../images/lse.png">
+        <p>LONDON SCHOOL OF ECONOMICS</p>
+      </div>
+      <div class="item">
+        <img src="../images/rcf.png">
+        <p>REFUGEE CRISIS FOUNDATION</p>
+      </div>
+      <div class="item">
+        <img src="../images/sr.png">
+        <p>SYRIA RELIEF</p>
+      </div>
+      <div class="item">
+        <img src="../images/tedx.png">
+        <p>TEDX</p>
+      </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+
+    <script>
+      $(document).ready(function() {
+        var owl = $('.owl-talks');
+        owl.owlCarousel({
+          margin: 10,
+          nav: false,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout:3000,
+          loop: true,
+          items: 1
+        })
+      })
+    </script>
+  </body>
+</html>
